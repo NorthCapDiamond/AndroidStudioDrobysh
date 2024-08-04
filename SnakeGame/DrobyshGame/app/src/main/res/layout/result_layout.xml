@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?selectableItemBackground"
+    android:paddingStart="10dp"
+    android:paddingTop="5dp"
+    android:paddingEnd="10dp"
+    android:paddingBottom="5dp">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cardBackgroundColor="#11f"
+        app:cardCornerRadius="20dp">
+        
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_marginStart="16dp"
+                android:id="@+id/scoreforlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/scoreforlay"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+            </ImageView>
+
+            <TextView
+                android:layout_marginStart="16dp"
+                android:textColor="@color/white"
+                android:id="@+id/hardCodedScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Score"
+                tools:ignore="HardcodedText"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/scoreforlay"/>
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/resScore"
+                android:layout_width="28dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintBottom_toTopOf="@id/hardCodedScore"
+                app:layout_constraintStart_toEndOf="@id/scoreforlay"
+                 />
+
+
+            <ImageView
+                android:id="@+id/clockImg"
+                android:layout_marginStart="36dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/time"
+                app:layout_constraintStart_toEndOf="@id/resScore"
+                app:layout_constraintTop_toTopOf="@id/resScore" />
+
+            <TextView
+                android:layout_marginStart="26dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/HardCodedTime"
+                android:textColor="@color/white"
+                android:text="Seconds"
+                app:layout_constraintStart_toEndOf="@id/resScore"
+                app:layout_constraintTop_toBottomOf="@id/clockImg"></TextView>
+
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/resDuration"
+                android:layout_marginStart="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/clockImg"
+                app:layout_constraintTop_toTopOf="@id/clockImg">
+
+            </TextView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
